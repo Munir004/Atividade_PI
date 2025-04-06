@@ -1,0 +1,186 @@
+.flex-item {
+    width: 100px;
+    height: 100px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.base {
+    margin-bottom: 15px;
+    background-color: #d0d3d4;
+    border-radius: 4px;
+}
+
+.box1 {
+    background-color: #63b1bc;
+}
+
+.box2 {
+    background-color: #1f2a44;
+}
+
+.box3 {
+    background-color: #ed145b;
+}
+
+.box4 {
+    background-color: #efb661;
+}
+
+h1 {
+    width: fit-content;
+    margin: auto;
+}
+
+/* Insira o código abaixo */
+
+.container1 {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    flex-direction: row;
+}
+
+.container2 {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    flex-direction: row;
+}
+
+.container3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+
+.container4{
+display: flex;
+flex-direction: row;
+position: relative;
+}
+
+
+.container4 .box1, .box2, .box3, .box4{
+    position: relative;
+}
+
+.container4 .box1{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.container4 .box2{
+    display: flex;
+    flex-direction: row;
+    left: 290px;
+    position: relative;
+}
+
+.container4 .box3{
+    display: flex;
+    flex-direction: row;
+    left: 650px;
+    position: relative;
+}
+
+.container4 .box4{
+display: flex;
+flex-direction: row;
+left: 935px;
+position: relative;
+}
+
+
+.container5{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.container5 .box1, .box2, .box3, .box4 {
+    position: relative;
+}
+
+.container5 .box1{
+    display: flex;
+    flex-direction: row;
+    left: 150px;
+    position: relative;
+}
+
+.container5 .box2{
+    display: flex;
+    flex-direction: row;
+    left: 350px;
+    position: relative;
+}
+
+.container5 .box3{
+    display: flex;
+    flex-direction: row;
+    left: 600px;
+    position: relative;
+}
+
+.container5 .box4{
+display: flex;
+flex-direction: row;
+left: 800px;
+position: relative;
+}
+
+.container6 {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.container6 .box1, .box2, .box3, .box4 {
+    position: relative;
+}
+
+.container6 .box1{
+    display: flex;
+    flex-direction: row;
+    left: 230px;
+    position: relative;
+}
+
+.container6 .box2{
+    display: flex;
+    flex-direction: row;
+    left: 380px;
+    position: relative;
+}
+
+.container6 .box3{
+    display: flex;
+    flex-direction: row;
+    left: 570px;
+    position: relative;
+}
+
+.container6 .box4{
+display: flex;
+flex-direction: row;
+left: 720px;
+position: relative;
+}
+
+
+.container-desafio1{
+display: flex;
+flex-direction: column-reverse;
+}
+
+.container-desafio2{
+    display: flex;
+flex-direction: row-reverse;
+right: 945px;
+position: relative;
+}
