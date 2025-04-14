@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Implementando o Chart.JS</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<style>
+    .grafico-container {
+        display: flex;
+        justify-content: center;
+        gap: 30px; 
+    }
+
+    canvas {
+        width: 400px !important; 
+        height: 300px !important;
+    } 
+</style>
+<body> 
+    <div class="grafico-container">
+        <canvas id="grafico"></canvas>
+        <canvas id="grafico2"></canvas>
+    </div>
+  <canvas id="grafico" style="position: relative; height:40vh; width:80vw" width="600" height="300"></canvas>
+  <canvas id="grafico2" style="position: relative; height:40vh; width:80vw" width="600" height="300"></canvas>
+
+  <script>
+    const ctx = document.getElementById('grafico') 
+
+    const grafico = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['12:00', '13:00', '14:00', '15:00', '16:00', '17:00'],
+        datasets: [
+          {
+            label: 'Temperatura',
+            data: [30, 29, 28, 25, 22, 23],
+            borderColor: 'rgba(255, 99, 132, 1)', // Pelo que eu entendi é com esse comando que muda a cor da linha, e esse dai é o rosa
+            backgroundColor: 'rgba(255, 99, 132, 0.2)'
+          },
+          {
+            label: 'Umidade',
+            data: [80, 82, 80, 85, 80, 83],
+            borderColor: 'rgba(54, 162, 235, 1)', // Mesma coisa do outro de cima, so que azul
+            backgroundColor: 'rgba(54, 162, 235, 0.2)'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top'
+          },
+          title: {
+            display: true,
+            text: 'Temperatura x Umidade'
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: false
+          }
+        }
+      }
+    }) 
+
+   const ctz = document.getElementById('grafico2') 
+   const grafico2 = new Chart(ctz, {
+    type: 'bar',
+    data: {
+      labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
+      datasets: [
+        {
+          label: 'Temperatura média',
+          data: [22, 24, 27, 23, 20, 18],
+          borderColor: 'rgba(255, 99, 132, 1)', // Pelo que eu entendi é com esse comando que muda a cor da linha, e esse dai é o rosa
+          backgroundColor: 'rgba(255, 99, 132, 0.2)'
+        },
+        {
+          label: 'Umidade média',
+          data: [90, 89, 93, 87, 88, 82],
+          borderColor: 'rgba(54, 162, 235, 1)', // Mesma coisa do outro de cima, so que azul
+          backgroundColor: 'rgba(54, 162, 235, 0.2)'
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top'
+        },
+        title: {
+          display: true,
+          text: 'Temperatura x Umidade'
+        }
+      },
+      scales: {
+        y: {
+          beginAtZero: false
+        }
+      }
+    } // Tive que adicionar um style com justify content e etc, mas não foi suficiente, tive que adicionar esse tal !important pra facilitar na visualização dos gráficos.
+  });
+   
+</script>
+
+ 
+</body>
+</html>
